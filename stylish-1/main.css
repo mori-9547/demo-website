@@ -1,0 +1,85 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding: 40px 72px;
+  z-index: 10;
+  justify-content: center;
+}
+
+.header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(8px);
+}
+
+.header-nav__item:first-child {
+  margin-right: 200px;
+}
+
+.header-nav__item a {
+  color: #fff;
+  font-size: 24px;
+  font-family: "Lora", serif;
+  text-decoration: none;
+  padding: 0 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.header-nav__item--logo {
+  background: url(/stylish-1/images/logo.png);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  display: block;
+  z-index: 2;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home {
+  background: url(/stylish-1/images/background.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #000;
+  opacity: 0.3;
+}
+
+.home-title {
+  position: absolute;
+  top: calc(50% + 40px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Lora", serif;
+  font-size: 100px;
+  white-space: nowrap;
+  color: #fff;
+  border: 4px solid;
+  padding: 24px 80px;
+}
