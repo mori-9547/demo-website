@@ -9,11 +9,11 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
-  z-index: 10;
+  /* z-index: 10; */
   width: 100%;
-  padding: 40px 20%;
+  padding: 40px 80px;
 }
 
 .header-nav__item {
@@ -23,9 +23,14 @@ body {
 
 .header-nav__item a {
   text-decoration: none;
-  color: #212121;
+  color: #fff;
   font-size: 20px;
-  margin-left: 32px;
+  margin-left: 56px;
+}
+
+.header-nav__item a.is-active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid;
 }
 
 .wrap {
@@ -47,21 +52,66 @@ body {
 .home-title {
   position: absolute;
   color: #fff;
-  font-size: 88px;
+  font-size: 100px;
   font-weight: bold;
-  left: 240px;
-  top: 400px;
-  letter-spacing: 4px;
+  left: 180px;
+  top: 464px;
+  letter-spacing: 8px;
   line-height: 1.1;
 }
 
 .content {
   width: 48%;
-  height: 90%;
+  height: 72%;
   display: block;
-  background: url(/stylish-2/images/product.jpg);
-  right: 0;
+  background: #fff;
+  mix-blend-mode: difference;
+  transform: rotate(-50deg) scale(1.6);
+  bottom: 50px;
+  right: -160px;
   position: absolute;
-  background-size: 110%;
-  background-position: 50% 30%;
+  overflow: hidden;
+}
+
+.slide-wrap {
+  position: absolute;
+  display: block;
+  width: 440px;
+  height: 320px;
+  background-image: url(/stylish-2/images/product.jpg);
+  background-size: cover;
+  background-position: center;
+  /* border-radius: 50%; */
+  transform: translate(-50%, -50%);
+  top: calc(50% + 40px);
+  right: -100px;
+  z-index: 1;
+  /* border-right: 4px solid #212121;
+  border-bottom: 4px solid #212121; */
+}
+
+.slide-wrap::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-right: 4px solid #212121;
+  border-bottom: 4px solid #212121;
+  top: 50%;
+  right: -80px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  position: absolute;
+  display: block;
+}
+
+.slide-wrap::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-left: 4px solid #212121;
+  border-bottom: 4px solid #212121;
+  top: 50%;
+  left: -56px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  position: absolute;
+  display: block;
 }

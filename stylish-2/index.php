@@ -12,23 +12,27 @@
     <title>Stylish Design No2</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header-nav__item">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Menu</a>
-            <a href="">Contact</a>
-        </div>
-    </header>
     <div class="wrap">
+        <header class="header">
+            <div class="header-nav__item">
+                <a class="is-active" href="">Home</a>
+                <a href="">About</a>
+                <a href="">News</a>
+                <a href="">Products</a>
+                <a href="">Recruit</a>
+                <a href="">Contact</a>
+            </div>
+        </header>
         <figure class="home-img">
             <img src="/stylish-2/images/woman.png">
         </figure>
         <h1 class="home-title">
-            Hair<br>
-            Cosmetics
+            HAIR<br>
+            COSMETICS
         </h1>
-        <div class="content"></div>
+        <div class="slide-wrap"></div>
+        <div class="content">
+        </div>
     </div>
 </body>
 </html>
